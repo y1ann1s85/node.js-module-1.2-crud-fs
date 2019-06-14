@@ -1,0 +1,19 @@
+{
+  "name": "class-6",
+  "version": "1.0.0",
+  "description": "nodejs-hw2",
+  "main": "main.js",
+  "scripts": {
+    "test": "npm main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/y1ann1s85/nodejs-module-1.2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/y1ann1s85/nodejs-module-1.2/issues"
+  },
+  "homepage": "https://github.com/y1ann1s85/nodejs-module-1.2#readme"
+}
