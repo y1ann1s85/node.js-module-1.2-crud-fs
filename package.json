@@ -2,9 +2,9 @@
   "name": "class-6",
   "version": "1.0.0",
   "description": "nodejs-hw2",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
-    "test": "npm main.js"
+    "test": "npm index.js"
   },
   "repository": {
     "type": "git",
