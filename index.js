@@ -4,6 +4,9 @@ const command = process.argv[2];
 const item = process.argv[3];
 const myFile = "list.txt";
 
+console.log(`Type "node . start" to create your To-Do list file`);
+console.log(`Type "node . help" to navigate through the Help menu`);
+
 if (command === "help") {
     console.log("This is a To Do list");
     console.log(" ");
@@ -13,7 +16,7 @@ if (command === "help") {
     console.log("- reset: Clear all To Do items from the list");
 }
 
-if (command === "show") {
+else if (command === "show") {
     fs.readFile(myFile, "utf-8", (err, listItems) => {
         if (err) throw err;
         console.log("To Do list items:");
@@ -31,7 +34,8 @@ else if (command === "add") {
 
         fs.writeFile(myFile, JSON.stringify(arr), (err) => {
             if (err) throw err;
-            console.log("Added to list:");
+            console.log("Added to list:", item);
+            console.log('To-Do List:');
             console.log(arr);
         });
     });
@@ -44,6 +48,13 @@ else if (command === "reset") {
     });
 }
 
+else if (command === "start") {
+    fs.writeFile(myFile, '[]', "utf-8", (err) => {
+        if (err) throw err;
+        console.log("Your To-Do list file has been created");
+    });
+}
+
 else if (command === "remove") {
 
     fs.readFile(myFile, "utf-8", (err, listItems)=>{
@@ -52,7 +63,9 @@ else if (command === "remove") {
         arr.splice(item-1 , 1);
         fs.writeFile(myFile, JSON.stringify(arr),(err)=>{
             if(err) throw err;
-            console.log('the item removed')
+            console.log('Item removed')
+            console.log('To-Do List:');
+            console.log(arr);
         });
     });
 }
