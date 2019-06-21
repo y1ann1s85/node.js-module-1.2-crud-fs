@@ -11,7 +11,6 @@ if (command === "help") {
     console.log("- add: Add To Do item in the list");
     console.log("- remove: Remove To Do item from the list");
     console.log("- reset: Clear all To Do items from the list");
-    // });
 }
 
 if (command === "show") {
